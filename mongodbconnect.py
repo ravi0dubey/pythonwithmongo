@@ -16,7 +16,10 @@ client = pymongo.MongoClient("mongodb+srv://ravi0dubey:Logiw@cluster0.0zxmnkl.mo
 db = client.test
 # print(db)
 
-
+#Hierarchy of MONGODB
+# 1. Database at top level
+# 2. Collections
+# 2. Data
 
 
 #document1 is called document which is placed inside collections
