@@ -116,3 +116,12 @@ for i in d:
 
 
 #delete query
+
+collection.delete_many({'SchoolName': 'St Michael'})
+
+#Printing details after deleting records with SchoolName St. Michael
+print("#Printing details after deleting records with SchoolName St. Michael")
+d = collection.find()
+
+for i in d:
+    print(f"Details : {i['SchoolName'], i['Location'],i['No_of_Students']}")
