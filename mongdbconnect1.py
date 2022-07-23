@@ -63,8 +63,8 @@ data1=[
 database2= client_connect["schooldb"]
 collection = database2["school_inventory"]
 
-#Inserting Data1 into collection
-# collection.insert_many(data1)
+# Inserting Data1 into collection
+collection.insert_many(data1)
 
 #Search Query
 
