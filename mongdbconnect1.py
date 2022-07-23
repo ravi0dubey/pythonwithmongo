@@ -62,17 +62,24 @@ data1=[
 
 database2= client_connect["schooldb"]
 collection = database2["school_inventory"]
-
+#
 # Inserting Data1 into collection
 collection.insert_many(data1)
 
 #Search Query
-
 # Finding school id with specific values of Schoolid
 print("Finding records with school id 10002")
 find1 = collection.find({'Schoolid':10002})
 for i in find1:
     print(i)
+
+#Search Query
+# Finding school id Entered by user during run time
+print("Finding records with school id 10002")
+find2 = collection.find({'Schoolid':int(input("Enter values of data"))})
+for i in find2:
+    print(f"Details : {i['SchoolName'], i['Location'],i['No_of_Students']}")
+
 
 # Finding records for multiple values of schoolid
 print("Finding records with school id 10001,10004,10005")
